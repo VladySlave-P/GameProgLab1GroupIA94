@@ -21,7 +21,6 @@ public class Movement : MonoBehaviour
         rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Speed, rb.velocity.y);
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            Debug.Log("123123");
             isGrounded = false;
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
         }
@@ -31,7 +30,6 @@ public class Movement : MonoBehaviour
     {
         if(collision.gameObject.tag == "ground")
         {
-            Debug.Log("smth");
             isGrounded = true;
         }
     }
